@@ -10,5 +10,7 @@ namespace Tp01.Entities
     {
         public abstract double Aire();
         public abstract double Perimetre();
+
+      
     }
 }

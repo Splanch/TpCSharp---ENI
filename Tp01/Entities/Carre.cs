@@ -10,7 +10,7 @@ namespace Tp01.Entities
     {
      
 
-        public override int Largeur { get => base.Longueur; set => base.Largeur = Longueur; }
+        public override int Largeur { get => base.Longueur; }
 
       
         public override string ToString()
