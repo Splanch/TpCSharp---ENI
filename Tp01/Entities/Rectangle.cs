@@ -10,7 +10,7 @@ namespace Tp01.Entities
     {
         private int longueur;
         private int largeur;
-        // test commit sfsdf
+  
         public virtual int Largeur { get => largeur; set => largeur = value; }
         public  int Longueur { get => longueur; set => longueur = value; }
 
