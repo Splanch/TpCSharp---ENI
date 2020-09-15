@@ -73,9 +73,10 @@ namespace TP01_Mod3
                 Console.WriteLine(item.Titre);
             }
 
+            Console.WriteLine("------");
             //Afficher l'auteur ayant écrit le moins de livres
 
-            Console.WriteLine(ListeAuteurs.Where();
+            //Console.WriteLine(ListeAuteurs.Where();
 
 
             Console.ReadKey();
