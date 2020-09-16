@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tp01", "Tp01\Tp01.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP01-Mod3", "TP01-Mod3\TP01-Mod3.csproj", "{4C391C04-A084-41A4-AD5B-B68BC0C91D64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1-Mod5-Chat", "TP1-Mod5-Chat\TP1-Mod5-Chat.csproj", "{BA25FA2C-BA5F-4F77-A11F-6D1D58F8E47E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4C391C04-A084-41A4-AD5B-B68BC0C91D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C391C04-A084-41A4-AD5B-B68BC0C91D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C391C04-A084-41A4-AD5B-B68BC0C91D64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA25FA2C-BA5F-4F77-A11F-6D1D58F8E47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA25FA2C-BA5F-4F77-A11F-6D1D58F8E47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA25FA2C-BA5F-4F77-A11F-6D1D58F8E47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA25FA2C-BA5F-4F77-A11F-6D1D58F8E47E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

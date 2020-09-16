@@ -21,11 +21,24 @@ namespace TP01_Mod3
             }
             Console.WriteLine("------");
 
-            // Auteur qui a le plus de lie
-            Console.WriteLine(ListeLivres.GroupBy(x => x.Auteur).Select(x => x.Count()).First());
+            
+            //Q2 Correction by Antoine C.
 
-            //Q2 
-            //Console.WriteLine(ListeLivres.Where(x=>x);
+            IGrouping<Auteur, Livre> auteurQ2 = ListeLivres
+                .GroupBy(l => l.Auteur)
+                .OrderByDescending(g => g.Count()).FirstOrDefault();
+
+
+            //IGrouping<Auteur, Livre> auteurQ2 = FakeDb.Instance.ListeLivres
+            //    .GroupBy(l => l.Auteur)
+            //    .FirstOrDefault(g => g.Count() == l.Max(g.Count());
+
+            Console.WriteLine("Q2 :");
+            Console.WriteLine($"{auteurQ2.Key.Nom} {auteurQ2.Key.Prenom}");
+
+            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("------");
 
             //Q3
             foreach (var item in ListeLivres.GroupBy(x => x.Auteur))
@@ -76,8 +89,7 @@ namespace TP01_Mod3
             Console.WriteLine("------");
             //Afficher l'auteur ayant écrit le moins de livres
 
-            //Console.WriteLine(ListeAuteurs.Where();
-
+           // Console.WriteLine(ListeAuteurs.Where();
 
             Console.ReadKey();
         }
