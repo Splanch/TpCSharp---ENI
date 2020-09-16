@@ -21,15 +21,31 @@ namespace TP1_Mod5_Chat.Controllers
         // GET: Chat/Details/5
         public ActionResult Details(int id)
         {
-           
-            return View(FakeData.Instance.ListeChats.FirstOrDefault(x => x.Id == id));
+
+            Chat chat = FakeData.Instance.ListeChats.FirstOrDefault(x => x.Id == id);
+            if (chat != null)
+            {
+                return View(chat);
+            }
+            else
+            {
+                return RedirectToRoute("Index");
+            }
         }
         
         // GET: Chat/Delete/5
         public ActionResult Delete(int id)
         {
-
-            return View(FakeData.Instance.ListeChats.FirstOrDefault(x => x.Id == id));
+            Chat chat = FakeData.Instance.ListeChats.FirstOrDefault(x => x.Id == id);
+            if (chat != null)
+            {
+                return View(chat);
+            }
+            else
+            {
+                return RedirectToRoute("Index");
+            }
+            
         }
 
         // POST: Chat/Delete/5

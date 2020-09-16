@@ -19,7 +19,7 @@ namespace TP1_Mod5_Chat.Data
 
         private FakeData()
         {
-            this.ListeChats = GetMeuteDeChats();
+            this.ListeChats = this.GetMeuteDeChats();
 
         }
 
