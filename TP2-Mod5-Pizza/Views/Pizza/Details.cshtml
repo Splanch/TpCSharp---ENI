@@ -1,0 +1,14 @@
+﻿@model TP2_Mod5_Pizza.Models.PizzaIngredientPateVM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div class="form-horizontal">
+    @Html.Partial("_PizzaDisplayWithId")
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pizza.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
