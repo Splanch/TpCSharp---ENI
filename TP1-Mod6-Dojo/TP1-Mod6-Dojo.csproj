@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EC5219C4-E5AE-4D09-AC2E-239C6E74D7D1}</ProjectGuid>
+    <ProjectGuid>{267F7956-EB37-4352-8C23-848E8A08B277}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TP2_Mod5_Pizza</RootNamespace>
-    <AssemblyName>TP2-Mod5-Pizza</AssemblyName>
+    <RootNamespace>TP1_Mod6_Dojo</RootNamespace>
+    <AssemblyName>TP1-Mod6-Dojo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -121,17 +127,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PizzaController.cs" />
-    <Compile Include="Database\FakeDB.cs" />
+    <Compile Include="Data\TP1_Mod6_DojoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\MyHelpers.cs" />
-    <Compile Include="Models\PizzaIngredientPateVM.cs" />
+    <Compile Include="Migrations\202009211430398_DojoV1.cs" />
+    <Compile Include="Migrations\202009211430398_DojoV1.Designer.cs">
+      <DependentUpon>202009211430398_DojoV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ArmesController.cs" />
+    <Compile Include="Models\SamouraisController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validation\IngredientValidator.cs" />
-    <Compile Include="Validation\NomUniqueValidator.cs" />
-    <Compile Include="Validation\UniqueIngredientsValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -169,13 +176,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Pizza\Edit.cshtml" />
-    <Content Include="Views\Pizza\Delete.cshtml" />
-    <Content Include="Views\Pizza\Index.cshtml" />
-    <Content Include="Views\Pizza\Create.cshtml" />
-    <Content Include="Views\Shared\_PizzaDisplay.cshtml" />
-    <Content Include="Views\Shared\_PizzaDisplayWithId.cshtml" />
-    <Content Include="Views\Pizza\Details.cshtml" />
+    <Content Include="Views\Armes\Create.cshtml" />
+    <Content Include="Views\Armes\Delete.cshtml" />
+    <Content Include="Views\Armes\Details.cshtml" />
+    <Content Include="Views\Armes\Edit.cshtml" />
+    <Content Include="Views\Armes\Index.cshtml" />
+    <Content Include="Views\Samourais\Create.cshtml" />
+    <Content Include="Views\Samourais\Delete.cshtml" />
+    <Content Include="Views\Samourais\Details.cshtml" />
+    <Content Include="Views\Samourais\Edit.cshtml" />
+    <Content Include="Views\Samourais\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -194,10 +204,15 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BO\BOPizza.csproj">
-      <Project>{6066eaaa-6025-49bc-a1f3-fc6447c42cd9}</Project>
-      <Name>BOPizza</Name>
+    <ProjectReference Include="..\BONinja\BO.csproj">
+      <Project>{0bba0441-0ab7-4112-946b-521c9cec7367}</Project>
+      <Name>BO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009211430398_DojoV1.resx">
+      <DependentUpon>202009211430398_DojoV1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -215,9 +230,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>43262</DevelopmentServerPort>
+          <DevelopmentServerPort>58815</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:43262/</IISUrl>
+          <IISUrl>http://localhost:58815/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

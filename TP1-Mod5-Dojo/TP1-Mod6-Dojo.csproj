@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EC5219C4-E5AE-4D09-AC2E-239C6E74D7D1}</ProjectGuid>
+    <ProjectGuid>{233E9587-3343-45C4-B77A-826BD6007EB8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TP2_Mod5_Pizza</RootNamespace>
-    <AssemblyName>TP2-Mod5-Pizza</AssemblyName>
+    <RootNamespace>TP1_Mod5_Dojo</RootNamespace>
+    <AssemblyName>TP1-Mod5-Dojo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -121,17 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PizzaController.cs" />
-    <Compile Include="Database\FakeDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\MyHelpers.cs" />
-    <Compile Include="Models\PizzaIngredientPateVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validation\IngredientValidator.cs" />
-    <Compile Include="Validation\NomUniqueValidator.cs" />
-    <Compile Include="Validation\UniqueIngredientsValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -169,16 +162,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Pizza\Edit.cshtml" />
-    <Content Include="Views\Pizza\Delete.cshtml" />
-    <Content Include="Views\Pizza\Index.cshtml" />
-    <Content Include="Views\Pizza\Create.cshtml" />
-    <Content Include="Views\Shared\_PizzaDisplay.cshtml" />
-    <Content Include="Views\Shared\_PizzaDisplayWithId.cshtml" />
-    <Content Include="Views\Pizza\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -194,9 +181,9 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BO\BOPizza.csproj">
-      <Project>{6066eaaa-6025-49bc-a1f3-fc6447c42cd9}</Project>
-      <Name>BOPizza</Name>
+    <ProjectReference Include="..\BONinja\BO.csproj">
+      <Project>{0bba0441-0ab7-4112-946b-521c9cec7367}</Project>
+      <Name>BO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -215,9 +202,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>43262</DevelopmentServerPort>
+          <DevelopmentServerPort>58793</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:43262/</IISUrl>
+          <IISUrl>http://localhost:58793/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
