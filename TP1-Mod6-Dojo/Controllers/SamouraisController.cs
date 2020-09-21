@@ -39,7 +39,9 @@ namespace TP1_Mod6_Dojo.Models
         // GET: Samourais/Create
         public ActionResult Create()
         {
-            return View();
+            SamouraiVM vm = new SamouraiVM();
+            vm.Armes = db.Armes.ToList();
+            return View(vm);
         }
 
         // POST: Samourais/Create
