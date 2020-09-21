@@ -10,11 +10,14 @@ using TP2_Mod5_Pizza.Validation;
 namespace TP2_Mod5_Pizza.Models
 {
     public class PizzaIngredientPateVM
-    {
+    {   
+        [NomUniqueValidator]
         public Pizza pizza { get; set; }
 
-        [IngredientValidator]
+        
         public List<SelectListItem> Ingredients { get; set; } = new List<SelectListItem>();
+
+        [IngredientValidator]
         public List<int> IdIngredient { get; set; }
 
         public List<SelectListItem> Pates { get; set; } = new List<SelectListItem>();
