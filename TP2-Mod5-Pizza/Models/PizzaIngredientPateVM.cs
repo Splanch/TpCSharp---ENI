@@ -18,6 +18,7 @@ namespace TP2_Mod5_Pizza.Models
         public List<SelectListItem> Ingredients { get; set; } = new List<SelectListItem>();
 
         [IngredientValidator]
+        [UniqueIngredientsValidator]
         public List<int> IdIngredient { get; set; }
 
         public List<SelectListItem> Pates { get; set; } = new List<SelectListItem>();

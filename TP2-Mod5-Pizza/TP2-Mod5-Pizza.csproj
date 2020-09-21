@@ -131,6 +131,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validation\IngredientValidator.cs" />
     <Compile Include="Validation\NomUniqueValidator.cs" />
+    <Compile Include="Validation\UniqueIngredientsValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
