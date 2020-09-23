@@ -1,4 +1,4 @@
-﻿@model TP1_Mod6_Dojo.Models.SamouraiVM
+﻿@model BODojo.Samourai
 
 @{
     ViewBag.Title = "Details";
@@ -11,28 +11,58 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Samourai.Force)
+            @Html.DisplayNameFor(model => model.Force)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Samourai.Force)
+            @Html.DisplayFor(model => model.Force)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Samourai.Nom)
+            @Html.DisplayNameFor(model => model.Nom)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Samourai.Nom)
+            @Html.DisplayFor(model => model.Nom)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Samourai.Arme)
+            @Html.DisplayNameFor(model => model.Arme)
         </dt>
         <dd>
+            @if (Model.Arme != null)
+            {
+                @Html.DisplayFor(model => model.Arme.Nom)
+            }
+            else
+            {
+                <div> Pas d'arme</div>}
 
-            @Html.DisplayFor(model => model.Samourai.Arme.Nom)
 
-         </dd>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtMartials)
+        </dt>
+        <dd>
+            @if (Model.ArtMartials.Count > 0)
+            {
+                foreach (var art in Model.ArtMartials)
+                {
+                    @Html.DisplayFor(x => art.Nom)<br />
+                }
+            }
+            else
+            {
+                <div> Pas d'arts martiaux</div>}
+
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Potentiel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Potentiel)
+        </dd>
+
 
 
 
@@ -40,6 +70,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Samourai.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
